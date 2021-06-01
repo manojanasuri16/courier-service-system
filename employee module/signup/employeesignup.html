@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Signup Page</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="employeesignup.css">
+    <style>
+        body{
+            background-image: url("employeesignup-background.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+            background-size: 100% 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form style="height: 530px;">
+            <img src="employeesignup-logo.png" height="120px">
+            <a href="..\..\homepage\homepage.html"><img src="home.png" width="20px"></a><br>
+            <h3>Create Your Account</h3>
+            <input type="text" name="fname" placeholder="First Name" required><br> 
+            <input type="text" name="lname" placeholder="Last Name" required><br>
+            <input type="text" placeholder="yyyy-mm-dd" name="dob" required><br>
+            <input type="email" name="email" placeholder="Email" required><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="password" name="pass" placeholder="Password" id="myInput" required>
+            <input type="checkbox" onclick="myFunction()" 
+            style="width: auto; background: transparent; border-radius: 50%; opacity:0.4;">
+            <script>
+                function myFunction() {
+                    var x = document.getElementById("myInput");
+                    if (x.type === "password") {
+                        x.type = "text";
+                    } 
+                    else {
+                        x.type = "password";
+                    }
+                }
+            </script>
+            <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="password" placeholder="Confirm Password" id="miInput" required>
+            <input type="checkbox" onclick="miFunction()" 
+            style="width: auto; background: transparent; border-radius: 50%; opacity:0.4;"><br>
+            <script>
+                function miFunction() {
+                    var x = document.getElementById("miInput");
+                    if (x.type === "password") {
+                        x.type = "text";
+                    } 
+                    else {
+                        x.type = "password";
+                    }
+                }
+            </script>
+            
+            <button style="width: 220px; height: 40px;">Create Account</button>
+            <script>
+            function createAccount() {
+                if (window.confirm('Your account has been created successfully\nClick OK to go to login page.'))
+                {
+                    window.location = "login.html";
+                }
+                else{
+                    window.location="homepage.html";
+                }
+            }
+            </script>
+        </form>
+    </div>
+</body>
+</html>
